@@ -8,8 +8,9 @@
     "build": "gulp build",
     "lighthouse": "gulp build && gulp lighthouse",
     "test": "editorconfig-cli & stylelint ./src/scss/**/*.scss --syntax scss & eslint ./src/js",
-    "stylelint-fix": "stylelint ./src/styles/**/*.scss --fix --syntax scss",
-    "eslint-fix": "eslint ./src/js/** --fix"
+    "stylelint-fix": "stylelint ./src/scss/**/*.scss --fix --syntax scss",
+    "eslint-fix": "eslint ./src/js/** --fix",
+    "fix": "yarn stylelint-fix && yarn eslint-fix"
   },
   "dependencies": {
     "js-datepicker": "^5.16.0",
@@ -26,9 +27,8 @@
     "del": "^5.1.0",
     "duplicate-package-checker-webpack-plugin": "^3.0.0",
     "editorconfig-cli": "^0.3.0",
-    "eslint": "^6.8.0",
-    "eslint-config-htmlacademy": "^0.5.2",
-    "eslint-config-standard": "^14.1.0",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",

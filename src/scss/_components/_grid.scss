@@ -45,17 +45,11 @@
   grid-gap: 1px;
 }
 
-.grid--scroll {
-
-}
-
 .grid__item {
   position: relative;
   overflow: hidden;
   max-width: 100%;
 }
-
-
 @include giant {
   .container {
     padding: 0 5%;
@@ -65,7 +59,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @include small {
   .grid {
     grid-template-columns: 1fr;
@@ -83,8 +76,8 @@
     width: 110%;
     align-self: flex-start;
 
-    &:after {
-      content: '';
+    &::after {
+      content: "";
       padding-right: 6%;
       width: 0;
       margin-left: -15px;
