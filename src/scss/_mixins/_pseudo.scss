@@ -1,0 +1,7 @@
+@mixin pseudo($display: block, $left: 0, $top: 0){
+  content: "";
+  display: $display;
+  position: absolute;
+  left: $left;
+  top: $top;
+}

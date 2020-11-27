@@ -50,7 +50,8 @@
   overflow: hidden;
   max-width: 100%;
 }
-@include giant {
+
+@include mq("desktop") {
   .container {
     padding: 0 5%;
   }
@@ -59,7 +60,8 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@include small {
+
+@include mq("phablet") {
   .grid {
     grid-template-columns: 1fr;
   }
