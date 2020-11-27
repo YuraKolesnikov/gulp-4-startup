@@ -1,4 +1,4 @@
-@mixin pseudo($display: block, $left: 0, $top: 0){
+@mixin pseudo($display: block, $left: 0, $top: 0) {
   content: "";
   display: $display;
   position: absolute;
