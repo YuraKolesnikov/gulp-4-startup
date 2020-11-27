@@ -1,12 +1,12 @@
-const path = require('path')
-const fs = require('fs').promises
-const open = require('open')
-const server = require('browser-sync').create()
-const del = require('del')
-const lighthouse = require('lighthouse')
-const chromeLauncher = require('chrome-launcher')
-const { write } = require('lighthouse/lighthouse-cli/printer')
-const reportGenerator = require('lighthouse/lighthouse-core/report/report-generator')
+const path            = require('path'),
+			fs              = require('fs').promises,
+			open            = require('open'),
+			server          = require('browser-sync').create(),
+			del             = require('del'),
+			lighthouse      = require('lighthouse'),
+			chromeLauncher  = require('chrome-launcher'),
+			{ write }       = require('lighthouse/lighthouse-cli/printer'),
+			reportGenerator = require('lighthouse/lighthouse-core/report/report-generator')
 
 const config = require('./config')
 

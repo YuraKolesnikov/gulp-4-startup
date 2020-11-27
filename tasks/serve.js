@@ -1,12 +1,11 @@
-const gulp = require('gulp')
+const gulp    = require('gulp'),
+			server  = require('browser-sync').create()
 
-const html = require('./html')
-const imageMin = require('./imageMin')
-const svgSprite = require('./svgSprite')
-const styles = require('./styles')
-const scripts = require('./scripts')
-
-const server = require('browser-sync').create()
+const html      = require('./html'),
+			imageMin  = require('./imageMin'),
+			svgSprite = require('./svgSprite'),
+			styles    = require('./styles'),
+			scripts   = require('./scripts')
 
 function readyReload(cb) {
 	server.reload()

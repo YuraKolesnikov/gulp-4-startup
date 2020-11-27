@@ -1,7 +1,7 @@
-const gulp = require('gulp'),
+const gulp    = require('gulp'),
 			plumber = require('gulp-plumber'),
-			w3c = require('gulp-w3c-html-validator'),
-			bem = require('gulp-html-bem-validator')
+			w3c     = require('gulp-w3c-html-validator'),
+			bem     = require('gulp-html-bem-validator')
 
 module.exports = function html(cb) {
 	return gulp.src('src/pages/*.html')

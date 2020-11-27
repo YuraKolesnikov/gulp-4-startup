@@ -1,13 +1,13 @@
-const gulp = require('gulp'),
-      plumber = require('gulp-plumber'),
-      sass = require('gulp-sass'),
-      cleanCSS = require('gulp-clean-css'),
-      sourcemaps = require('gulp-sourcemaps'),
-      shorthand = require('gulp-shorthand'),
-      autoprefixer = require('gulp-autoprefixer'),
+const gulp          = require('gulp'),
+      plumber       = require('gulp-plumber'),
+      sass          = require('gulp-sass'),
+      cleanCSS      = require('gulp-clean-css'),
+      sourcemaps    = require('gulp-sourcemaps'),
+      shorthand     = require('gulp-shorthand'),
+      autoprefixer  = require('gulp-autoprefixer'),
       gulpStylelint = require('gulp-stylelint'),
-			gcmq = require('gulp-group-css-media-queries'),
-      rename = require("gulp-rename")
+			gcmq          = require('gulp-group-css-media-queries'),
+      rename        = require("gulp-rename")
 
 module.exports = function styles() {
 	return gulp.src('src/scss/*.scss')
