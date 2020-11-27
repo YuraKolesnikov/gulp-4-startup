@@ -1,0 +1,93 @@
+/*
+	Possible layouts:
+
+	.section
+		.grid (+.grid--no-gutters|.grid--scroll)
+			.grid__item.custom-class
+
+	.container
+		.grid (+.grid--no-gutters|.grid--scroll)
+			.grid__item.custom-class
+*/
+
+.section {
+  padding: 70px 5%;
+}
+
+.container {
+  max-width: 1400px;
+  padding: 0 50px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  opacity: 1;
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid--no-gutters {
+  grid-gap: 1px;
+}
+
+.grid--scroll {
+
+}
+
+.grid__item {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+
+@include giant {
+  .container {
+    padding: 0 5%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include small {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid--scroll {
+    grid-template-columns: 1fr;
+    margin: 22px 0 22px -5%;
+    padding: 0 0 0 5%;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(82%, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+    grid-gap: 15px;
+    width: 110%;
+    align-self: flex-start;
+
+    &:after {
+      content: '';
+      padding-right: 6%;
+      width: 0;
+      margin-left: -15px;
+    }
+  }
+}
