@@ -3,11 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn test && yarn build"
-    }
-  },
   "scripts": {
     "start": "gulp start",
     "build": "gulp build",
@@ -17,6 +12,7 @@
     "eslint-fix": "eslint ./src/js/** --fix"
   },
   "dependencies": {
+    "js-datepicker": "^5.16.0",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
@@ -41,6 +37,7 @@
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.2.0",
     "gulp-eslint": "^6.0.0",
+    "gulp-group-css-media-queries": "^1.2.2",
     "gulp-html-bem-validator": "^1.0.5",
     "gulp-imagemin": "^7.1.0",
     "gulp-npm-dist": "^1.0.3",
@@ -64,8 +61,7 @@
     "stylelint-config-standard": "^19.0.0",
     "stylelint-config-standard-scss": "^1.1.0",
     "stylelint-scss": "^3.13.0",
-    "webpack-stream": "^5.2.1",
-    "gulp-group-css-media-queries": "^1.2.2"
+    "webpack-stream": "^5.2.1"
   },
   "editorconfig-cli": [
     "*.json",
